@@ -202,6 +202,37 @@
 .conf-txt p { margin: 2px 0 0; font-size: 13px; color: var(--texto-2); }
 .sobre p { color: var(--texto-2); font-size: 14px; }
 
+/* ---------------- Créditos ---------------- */
+.creditos-heroi {
+  display: grid; justify-items: center; gap: 10px; padding: 32px 20px; text-align: center;
+  background: radial-gradient(500px 220px at 50% 0%, rgba(34, 211, 238, 0.16), transparent 70%), var(--painel);
+}
+.creditos-logo .marca-logo { width: 84px; height: 84px; }
+.creditos-marca { font-family: var(--fonte-display); font-weight: 800; font-size: clamp(30px, 5vw, 44px); letter-spacing: 0.06em; line-height: 1; }
+.creditos-heroi p { margin: 4px 0 0; color: var(--texto-2); }
+.creditos-sub { margin-top: 26px; }
+.autor { display: flex; align-items: center; gap: 18px; }
+.autor-avatar {
+  display: grid; place-items: center; width: 68px; height: 68px; flex-shrink: 0; border-radius: 50%;
+  font-family: var(--fonte-display); font-weight: 800; font-size: 24px; color: #03262d;
+  background: linear-gradient(135deg, #67e8f9, #22d3ee 50%, #4ade80);
+  box-shadow: 0 0 0 3px var(--fundo), 0 0 0 5px rgba(34, 211, 238, 0.55), 0 0 24px rgba(34, 211, 238, 0.35);
+}
+.autor h3 { margin: 0 0 4px; font-size: 19px; }
+.autor p { display: flex; align-items: center; gap: 6px; margin: 0; color: var(--texto-2); font-size: 14px; }
+.autor p .ic { color: var(--acento); }
+.creditos-ficha { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 22px; margin: 0 0 14px; }
+.creditos-ficha dt { font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--texto-3); }
+.creditos-ficha dd { margin: 3px 0 0; font-weight: 600; }
+.creditos-acoes { gap: 12px; flex-wrap: wrap; }
+@media (max-width: 820px) {
+  .creditos-ficha { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .creditos-ficha { grid-template-columns: minmax(0, 1fr); }
+  .autor-avatar { width: 56px; height: 56px; font-size: 20px; }
+}
+
 /* ---------------- Relatório ---------------- */
 .relatorio { display: grid; gap: 16px; }
 .rel-cab { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px; }

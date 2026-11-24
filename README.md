@@ -111,6 +111,10 @@ minha_falha: {
 
 **Novo alerta** — em `alertas`, com as evidências, o tipo de ameaça correto (`ameaca`), três distratores, as respostas e o gatilho (`identificado`, `analisados` ou `tempo`).
 
+## Créditos
+
+Desenvolvido por **Vinícius Mariozi Oliveira** e **Julio Aurélio Souza**, estudantes do SENAI, com auxílio de inteligência artificial, como proposto no desafio. A tela **Créditos** fica no menu lateral do jogo.
+
 ## Observações
 
 - Marcas, modelos e pessoas das missões são fictícios.

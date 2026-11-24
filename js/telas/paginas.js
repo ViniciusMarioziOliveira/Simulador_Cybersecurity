@@ -210,6 +210,49 @@ CD.telas = CD.telas || {};
     CD.acoes['abrir-conteudo'](alvo || el);
   };
 
+  /* ======================= CRÉDITOS ======================= */
+  const AUTORES = [
+    { nome: 'Vinícius Mariozi Oliveira', iniciais: 'VO' },
+    { nome: 'Julio Aurélio Souza', iniciais: 'JS' },
+  ];
+
+  CD.telas.creditos = {
+    titulo: 'Créditos',
+    montar: function (view) {
+      view.innerHTML = cab('users', 'Créditos') +
+        '<section class="card creditos-heroi">' +
+          '<div class="creditos-logo">' + CD.logoMarca() + '</div>' +
+          '<div class="creditos-marca"><span class="marca-1">CYBER</span> <span class="marca-2">DEFENSE</span></div>' +
+          '<div class="hero-faixa">Proteja sua Smart Home</div>' +
+          '<p>Simulador interativo de segurança residencial</p>' +
+        '</section>' +
+
+        '<h2 class="secao-titulo creditos-sub">Desenvolvido por</h2>' +
+        '<div class="grade-2 creditos-autores">' + AUTORES.map(function (a) {
+          return '<article class="card autor">' +
+            '<span class="autor-avatar" aria-hidden="true">' + esc(a.iniciais) + '</span>' +
+            '<div><h3>' + esc(a.nome) + '</h3><p>' + I('graduation') + 'Estudante do SENAI</p></div>' +
+          '</article>';
+        }).join('') + '</div>' +
+
+        '<section class="card"><h2 class="card-tit">' + I('info') + 'Sobre o projeto</h2>' +
+          '<dl class="creditos-ficha">' +
+            '<div><dt>Instituição</dt><dd>SENAI</dd></div>' +
+            '<div><dt>Unidade curricular</dt><dd>Internet das Coisas</dd></div>' +
+            '<div><dt>Tema</dt><dd>Cibersegurança em Internet das Coisas</dd></div>' +
+            '<div><dt>Desafio</dt><dd>Cyber Defense: Proteja sua Smart Home</dd></div>' +
+            '<div><dt>Tecnologias</dt><dd>HTML, CSS, JavaScript, SVG e Web Audio API</dd></div>' +
+            '<div><dt>Ano</dt><dd>2026</dd></div>' +
+          '</dl>' +
+          '<p class="nota">' + I('sparkles') + 'Desenvolvido com auxílio de inteligência artificial, como proposto no desafio.</p>' +
+        '</section>' +
+        '<div class="centro creditos-acoes">' +
+          '<a class="btn btn-primario btn-lg" href="#/jogar">' + I('play') + 'Jogar</a>' +
+          '<a class="btn btn-fantasma btn-lg" href="#/inicio">' + I('home') + 'Início</a>' +
+        '</div>';
+    },
+  };
+
   /* ======================= CONFIGURAÇÕES ======================= */
   function chave(nome, rotulo, desc) {
     const v = CD.store.config[nome];

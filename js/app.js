@@ -16,7 +16,7 @@ CD.app = (function () {
   const ROTAS = {
     inicio: 'inicio', jogar: 'jogar', missao: 'missao', relatorio: 'relatorio',
     'como-jogar': 'comoJogar', progresso: 'progresso', conquistas: 'conquistas',
-    conteudos: 'conteudos', configuracoes: 'configuracoes',
+    conteudos: 'conteudos', configuracoes: 'configuracoes', creditos: 'creditos',
   };
 
   const NAV = [
@@ -27,21 +27,13 @@ CD.app = (function () {
     { rota: 'conquistas', nome: 'Conquistas', icone: 'trophy' },
     { rota: 'conteudos', nome: 'Conteúdos', icone: 'book' },
     { rota: 'configuracoes', nome: 'Configurações', icone: 'settings' },
+    { rota: 'creditos', nome: 'Créditos', icone: 'users' },
   ];
 
   /* ---------------- Menu lateral ---------------- */
-  function logo() {
-    return '<svg class="marca-logo" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">' +
-      '<path d="M5 19 20 6l15 13" class="lg-casa"/><path d="M9.5 15.5V33h21V15.5" class="lg-casa"/>' +
-      '<path d="M20 15.5c2.6 1.8 5.2 2.4 6.8 2.4v4.6c0 4.6-3.1 7.1-6.8 8.4-3.7-1.3-6.8-3.8-6.8-8.4v-4.6c1.6 0 4.2-.6 6.8-2.4z" class="lg-escudo"/>' +
-      '<path d="m17.2 23.2 2 2 3.8-3.8" class="lg-check"/>' +
-      '<path d="M2 27h4M34 27h4M2 31h3M35 31h3" class="lg-circ"/>' +
-    '</svg>';
-  }
-
   function renderSidebar() {
     sidebar.innerHTML =
-      '<a class="marca" href="#/inicio" aria-label="Cyber Defense — início">' + logo() +
+      '<a class="marca" href="#/inicio" aria-label="Cyber Defense — início">' + CD.logoMarca() +
         '<span class="marca-txt"><span class="marca-1">CYBER</span><span class="marca-2">DEFENSE</span></span></a>' +
       '<nav class="nav">' + NAV.map(function (n) {
         return '<a class="nav-item" href="#/' + n.rota + '" data-rota="' + n.rota + '">' + I(n.icone) + '<span>' + n.nome + '</span>' +

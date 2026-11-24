@@ -103,6 +103,16 @@ window.CD = window.CD || {};
     return '<svg class="ic' + (cls ? ' ' + cls : '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' + d + '</svg>';
   };
 
+  /** Logotipo do jogo (casa + escudo). */
+  CD.logoMarca = function () {
+    return '<svg class="marca-logo" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M5 19 20 6l15 13" class="lg-casa"/><path d="M9.5 15.5V33h21V15.5" class="lg-casa"/>' +
+      '<path d="M20 15.5c2.6 1.8 5.2 2.4 6.8 2.4v4.6c0 4.6-3.1 7.1-6.8 8.4-3.7-1.3-6.8-3.8-6.8-8.4v-4.6c1.6 0 4.2-.6 6.8-2.4z" class="lg-escudo"/>' +
+      '<path d="m17.2 23.2 2 2 3.8-3.8" class="lg-check"/>' +
+      '<path d="M2 27h4M34 27h4M2 31h3M35 31h3" class="lg-circ"/>' +
+    '</svg>';
+  };
+
   /** Só os caminhos do ícone (para usar dentro de outro SVG, como a planta da casa). */
   CD.iconePaths = function (nome) {
     return P[nome] || P.info;
